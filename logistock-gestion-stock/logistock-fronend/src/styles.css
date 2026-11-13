@@ -1,0 +1,53 @@
+/* Styles communs à toutes les pages de LogiStock SA */
+:root {
+  --bleu: #2563eb;
+  --texte: #0f172a;
+  --gris: #64748b;
+  --bordure: #e2e8f0;
+  --fond: #f1f5f9;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  color: var(--texte);
+  background: var(--fond);
+}
+.conteneur { max-width: 1000px; margin: 0 auto; padding: 1.5rem 1rem; }
+.barre { display: flex; justify-content: space-between; align-items: center; gap: 1rem; margin-bottom: 1rem; }
+.barre h1 { margin: 0; font-size: 1.5rem; }
+
+.btn { display: inline-block; padding: .55rem 1rem; border: 0; border-radius: 8px; background: var(--bleu);
+       color: #fff; font: inherit; font-weight: 600; cursor: pointer; text-decoration: none; }
+.btn:disabled { opacity: .6; cursor: default; }
+.btn-secondaire { background: #fff; color: var(--texte); border: 1px solid #cbd5e1; }
+.btn-danger { background: #dc2626; }
+.btn-petit { padding: .3rem .6rem; font-size: .85rem; }
+
+.carte { background: #fff; border: 1px solid var(--bordure); border-radius: 12px; padding: 1rem 1.25rem; margin-bottom: 1rem; }
+.filtres { display: flex; flex-wrap: wrap; gap: .75rem; margin-bottom: 1rem; }
+.filtres input { flex: 1 1 260px; }
+
+input, select, textarea { padding: .55rem .7rem; border: 1px solid #cbd5e1; border-radius: 8px; font: inherit; background: #fff; }
+input:focus, select:focus, textarea:focus { outline: 2px solid var(--bleu); border-color: transparent; }
+input:disabled { background: #f1f5f9; color: var(--gris); }
+
+.erreur { padding: .6rem .75rem; border-radius: 8px; background: #fee2e2; color: #991b1b; margin: 0 0 1rem; }
+.vide { color: var(--gris); text-align: center; padding: 1.5rem; }
+
+.defilement { overflow-x: auto; }
+.tableau { width: 100%; border-collapse: collapse; background: #fff; border: 1px solid var(--bordure); }
+.tableau th, .tableau td { padding: .65rem .75rem; text-align: left; border-bottom: 1px solid var(--bordure); }
+.tableau th { background: #f8fafc; font-size: .85rem; color: var(--gris); }
+.tableau .nombre { text-align: right; white-space: nowrap; }
+.actions { display: flex; gap: .4rem; justify-content: flex-end; }
+
+.badge { display: inline-block; padding: .1rem .5rem; border-radius: 999px; font-size: .75rem; font-weight: 600; margin-left: .4rem; }
+.badge-alerte { background: #fef3c7; color: #92400e; }
+.badge-rupture { background: #fee2e2; color: #991b1b; }
+
+.formulaire { display: grid; gap: .75rem; max-width: 520px; }
+.champ { display: flex; flex-direction: column; gap: .25rem; }
+.champ label { font-weight: 600; font-size: .9rem; color: #334155; }
+.champ small { color: var(--gris); }
+.boutons { display: flex; gap: .5rem; margin-top: .5rem; }
